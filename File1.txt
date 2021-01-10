@@ -1,16 +1,18 @@
 Hello World.......
 this second line is added in this modification
 
-Change 1: -> to fix bug1
+Change 1: -> To fix bug1
 
-Change 2: -> by team mate for WI5-logout feature and added colon
+Change 2: -> By team mate for WI5-logout feature and added colon
 
-Change 3: -> to fix bug2
+Change 3: -> To fix bug2
 
-Change 4: -> by team mate for WI6- Login feature and added number
+Change 4: -> By team mate for WI6- Login feature and added number
 
-Change 5: -> to work on CR1 and added arrow sign
+Change 5: -> To work on CR1 and added arrow sign
 
 Change 6: -> WI7 in progress related cart feature
 
 Change 7: -> on remote server by teammate to test rebase with conflict CR2
+
+Change 8: -> WI9 on local master to test conflict with remote master
