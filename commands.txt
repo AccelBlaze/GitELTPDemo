@@ -1,0 +1,809 @@
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo
+$ git config user.name
+Shivank
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo
+$ git config user.email
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo
+$ git config user.email "shivank36f@gmail.com"
+fatal: not in a git directory
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo
+$ git config --global user.email "shivank36f@gmail.com"
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo
+$ git config user.email
+shivank36f@gmail.com
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo
+$ git config list
+error: key does not contain a section: list
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=Shivank
+user.email=shivank36f@gmail.com
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo
+$ git config core.editor
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo
+$ git config core.editor "notepad"
+fatal: not in a git directory
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo
+$ git config --global core.editor "notepad"
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo
+$ git config core.editor
+notepad
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo
+$ git init
+Initialized empty Git repository in E:/TRaiNiNG/3 GIT/Projects/Demo/.git/
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ------file1 created  with hello world content
+bash: ------file1: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        File1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git add file1.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        File1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git diff --staged
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git diff --name-only --cached
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git add File1.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   File1.txt
+
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ^C
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git rm --cached File1.txt
+rm 'File1.txt'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        File1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git add .
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   File1.txt
+
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git commit -m "WI1:File1 created with Hello World.... text"
+[master (root-commit) 11e6534] WI1:File1 created with Hello World.... text
+ 1 file changed, 1 insertion(+)
+ create mode 100644 File1.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ---------modify file1.txt
+bash: ---------modify: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git commit -am "WI1:File Updated, change added for WI1"
+[master 64f604e] WI1:File Updated, change added for WI1
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ---------file2 created with some content
+bash: ---------file2: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        File2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git add .
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   File2.txt
+
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git commit -m "WI2: File2 created with Welcome to GIT text"
+[master acfa7a5] WI2: File2 created with Welcome to GIT text
+ 1 file changed, 1 insertion(+)
+ create mode 100644 File2.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log
+commit acfa7a522abd36fdbdae03141f551f3bbfa64a74 (HEAD -> master)
+Author: Shivank <shivank36f@gmail.com>
+Date:   Sat Jan 9 18:42:13 2021 +0530
+
+    WI2: File2 created with Welcome to GIT text
+
+commit 64f604e00a914bb72f661d9a63caaead4f3a57b9
+Author: Shivank <shivank36f@gmail.com>
+Date:   Sat Jan 9 18:39:07 2021 +0530
+
+    WI1:File Updated, change added for WI1
+
+commit 11e653498bb05bf88c9046fd923ab47359711c16
+Author: Shivank <shivank36f@gmail.com>
+Date:   Sat Jan 9 18:34:57 2021 +0530
+
+    WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git checkout 11e6534
+Note: switching to '11e6534'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo ((11e6534...))
+$ dir
+File1.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo ((11e6534...))
+$ git log
+commit 11e653498bb05bf88c9046fd923ab47359711c16 (HEAD)
+Author: Shivank <shivank36f@gmail.com>
+Date:   Sat Jan 9 18:34:57 2021 +0530
+
+    WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo ((11e6534...))
+$ git checkout 'master'
+Previous HEAD position was 11e6534 WI1:File1 created with Hello World.... text
+Switched to branch 'master'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ dir
+File1.txt  File2.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log
+commit acfa7a522abd36fdbdae03141f551f3bbfa64a74 (HEAD -> master)
+Author: Shivank <shivank36f@gmail.com>
+Date:   Sat Jan 9 18:42:13 2021 +0530
+
+    WI2: File2 created with Welcome to GIT text
+
+commit 64f604e00a914bb72f661d9a63caaead4f3a57b9
+Author: Shivank <shivank36f@gmail.com>
+Date:   Sat Jan 9 18:39:07 2021 +0530
+
+    WI1:File Updated, change added for WI1
+
+commit 11e653498bb05bf88c9046fd923ab47359711c16
+Author: Shivank <shivank36f@gmail.com>
+Date:   Sat Jan 9 18:34:57 2021 +0530
+
+    WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+acfa7a5 (HEAD -> master) WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log -2
+commit acfa7a522abd36fdbdae03141f551f3bbfa64a74 (HEAD -> master)
+Author: Shivank <shivank36f@gmail.com>
+Date:   Sat Jan 9 18:42:13 2021 +0530
+
+    WI2: File2 created with Welcome to GIT text
+
+commit 64f604e00a914bb72f661d9a63caaead4f3a57b9
+Author: Shivank <shivank36f@gmail.com>
+Date:   Sat Jan 9 18:39:07 2021 +0530
+
+    WI1:File Updated, change added for WI1
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline -2
+acfa7a5 (HEAD -> master) WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log -2 --oneline
+acfa7a5 (HEAD -> master) WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --author='shiva'
+commit acfa7a522abd36fdbdae03141f551f3bbfa64a74 (HEAD -> master)
+Author: Shivank <shivank36f@gmail.com>
+Date:   Sat Jan 9 18:42:13 2021 +0530
+
+    WI2: File2 created with Welcome to GIT text
+
+commit 64f604e00a914bb72f661d9a63caaead4f3a57b9
+Author: Shivank <shivank36f@gmail.com>
+Date:   Sat Jan 9 18:39:07 2021 +0530
+
+    WI1:File Updated, change added for WI1
+
+commit 11e653498bb05bf88c9046fd923ab47359711c16
+Author: Shivank <shivank36f@gmail.com>
+Date:   Sat Jan 9 18:34:57 2021 +0530
+
+    WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --since='01/09/2021' --oneline
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --since='01/08/2021' --oneline
+acfa7a5 (HEAD -> master) WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --until='01/08/2021' --oneline
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --until='01/09/2021' --oneline
+acfa7a5 (HEAD -> master) WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --until='01/26/2021' --oneline
+acfa7a5 (HEAD -> master) WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log grep='GIT'
+fatal: ambiguous argument 'grep=GIT': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --grep='GIT'
+commit acfa7a522abd36fdbdae03141f551f3bbfa64a74 (HEAD -> master)
+Author: Shivank <shivank36f@gmail.com>
+Date:   Sat Jan 9 18:42:13 2021 +0530
+
+    WI2: File2 created with Welcome to GIT text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --grep='GIT1'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --grep='GIT' --oneline
+acfa7a5 (HEAD -> master) WI2: File2 created with Welcome to GIT text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --help
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git diff
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ------make some changes in file 1
+bash: ------make: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git diff
+diff --git a/File1.txt b/File1.txt
+index 8245d43..ce1e8e6 100644
+--- a/File1.txt
++++ b/File1.txt
+@@ -1,2 +1,4 @@
+ Hello World.......
+-this second line is added in this modification
+\ No newline at end of file
++this second line is added in this modification
++
++******wow    changed*****after this we use git diff******
+\ No newline at end of file
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git diff
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git diff
+diff --git a/File1.txt b/File1.txt
+index 8245d43..0a91489 100644
+--- a/File1.txt
++++ b/File1.txt
+@@ -1,2 +1,4 @@
+ Hello World.......
+-this second line is added in this modification
+\ No newline at end of file
++this second line is added in this modification
++
++*******Wow******we will use git diff now*****
+\ No newline at end of file
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git restore File1.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .class
+        .jar
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ----------now we create .gitignore.txt file with extensions u wanna avoid from being tracked
+bash: ----------now: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .class
+        .gitignore.txt
+        .jar
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ -------the file extension should be .gitignnore   or extensions visibility should be disabled
+bash: -------the: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git add .
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git commit -m 'config: .gitignore file created to skip class, jar, temp folder and testdata file'
+[master 9635726] config: .gitignore file created to skip class, jar, temp folder and testdata file
+ 1 file changed, 4 insertions(+)
+ create mode 100644 .gitignore
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ fit log --oneline
+bash: fit: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+9635726 (HEAD -> master) config: .gitignore file created to skip class, jar, temp folder and testdata file
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ -------file to be deleted created to check git tracks file events
+bash: -------file: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        FileToBeDeleted.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git add .
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git commit -m 'WI3: FileToBeDeleted created to check file events tracked by git'
+[master a563d26] WI3: FileToBeDeleted created to check file events tracked by git
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 FileToBeDeleted.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+a563d26 (HEAD -> master) WI3: FileToBeDeleted created to check file events tracked by git
+9635726 config: .gitignore file created to skip class, jar, temp folder and testdata file
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ----------now delete the file
+bash: ----------now: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    FileToBeDeleted.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git rm FileToBeDeleted.txt
+rm 'FileToBeDeleted.txt'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    FileToBeDeleted.txt
+
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git commit -m 'WI3: filetobedeleted removed due to so n so reason'
+[master 44573a0] WI3: filetobedeleted removed due to so n so reason
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 FileToBeDeleted.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+44573a0 (HEAD -> master) WI3: filetobedeleted removed due to so n so reason
+a563d26 WI3: FileToBeDeleted created to check file events tracked by git
+9635726 config: .gitignore file created to skip class, jar, temp folder and testdata file
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git tag
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+44573a0 (HEAD -> master) WI3: filetobedeleted removed due to so n so reason
+a563d26 WI3: FileToBeDeleted created to check file events tracked by git
+9635726 config: .gitignore file created to skip class, jar, temp folder and testdata file
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git tag V1.1
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+44573a0 (HEAD -> master, tag: V1.1) WI3: filetobedeleted removed due to so n so reason
+a563d26 WI3: FileToBeDeleted created to check file events tracked by git
+9635726 config: .gitignore file created to skip class, jar, temp folder and testdata file
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git tag V1.0 9635726
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+44573a0 (HEAD -> master, tag: V1.1) WI3: filetobedeleted removed due to so n so reason
+a563d26 WI3: FileToBeDeleted created to check file events tracked by git
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp folder and testdata file
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git checkout V1.0
+Note: switching to 'V1.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 9635726 config: .gitignore file created to skip class, jar, temp folder and testdata file
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo ((V1.0))
+$ git log --oneline
+9635726 (HEAD, tag: V1.0) config: .gitignore file created to skip class, jar, temp folder and testdata file
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo ((V1.0))
+$ git checkout master
+Previous HEAD position was 9635726 config: .gitignore file created to skip class, jar, temp folder and testdata file
+Switched to branch 'master'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+44573a0 (HEAD -> master, tag: V1.1) WI3: filetobedeleted removed due to so n so reason
+a563d26 WI3: FileToBeDeleted created to check file events tracked by git
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp folder and testdata file
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git checkout V1.1
+Note: switching to 'V1.1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 44573a0 WI3: filetobedeleted removed due to so n so reason
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo ((V1.1))
+$ git log --oneline
+44573a0 (HEAD, tag: V1.1, master) WI3: filetobedeleted removed due to so n so reason
+a563d26 WI3: FileToBeDeleted created to check file events tracked by git
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp folder and testdata file
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo ((V1.1))
+$ git checkout master
+Switched to branch 'master'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git revert V1.1
+hint: Waiting for your editor to close the file... unix2dos: converting file E:/TRaiNiNG/3 GIT/Projects/Demo/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file E:/TRaiNiNG/3 GIT/Projects/Demo/.git/COMMIT_EDITMSG to Unix format...
+[master 7c27189] Revert "WI3: filetobedeleted removed due to so n so reason"
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 FileToBeDeleted.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+7c27189 (HEAD -> master) Revert "WI3: filetobedeleted removed due to so n so reason"
+44573a0 (tag: V1.1) WI3: filetobedeleted removed due to so n so reason
+a563d26 WI3: FileToBeDeleted created to check file events tracked by git
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp folder and testdata file
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git reset --hard V1.1
+HEAD is now at 44573a0 WI3: filetobedeleted removed due to so n so reason
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+44573a0 (HEAD -> master, tag: V1.1) WI3: filetobedeleted removed due to so n so reason
+a563d26 WI3: FileToBeDeleted created to check file events tracked by git
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp folder and testdata file
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git reset --hard head~2
+HEAD is now at 9635726 config: .gitignore file created to skip class, jar, temp folder and testdata file
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ --------git reset --hard head   can remove whatever head is pointing
+bash: --------git: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+9635726 (HEAD -> master, tag: V1.0) config: .gitignore file created to skip class, jar, temp folder and testdata file
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git --version
+git version 2.30.0.windows.1
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ^C
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$
