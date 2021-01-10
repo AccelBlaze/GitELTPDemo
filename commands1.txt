@@ -1,0 +1,1149 @@
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+9635726 (HEAD -> master, tag: V1.0) config: .gitignore file created to skip clas testdata file
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commands.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git add commands.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git commit -m "Day1 commands executed and stored in file commands.txt"
+[master eac28f5] Day1 commands executed and stored in file commands.txt
+ 1 file changed, 809 insertions(+)
+ create mode 100644 commands.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+eac28f5 (HEAD -> master) Day1 commands executed and stored in file commands.txt
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp fol
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git branch
+* master
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git branch bug1
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git branch
+  bug1
+* master
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug1)
+$ git branch
+* bug1
+  master
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug1)
+$ git log --oneline
+eac28f5 (HEAD -> bug1, master) Day1 commands executed and stored in file command
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp fol
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug1)
+$ -----change to fix bug1   text added to file 1
+bash: -----change: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug1)
+$ git status
+On branch bug1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug1)
+$ git commit -am "bug1:File1 updated to fix bug"
+[bug1 6d053da] bug1:File1 updated to fix bug
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug1)
+$ git log --oneline
+6d053da (HEAD -> bug1) bug1:File1 updated to fix bug
+eac28f5 (master) Day1 commands executed and stored in file commands.txt
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp fol
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug1)
+$ git status
+On branch bug1
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug1)
+$ git checkout master
+Switched to branch 'master'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+eac28f5 (HEAD -> master) Day1 commands executed and stored in file commands.txt
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp fol
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ -----------see the file1 content
+bash: -----------see: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git merge bug1
+Updating eac28f5..6d053da
+Fast-forward
+ File1.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+6d053da (HEAD -> master, bug1) bug1:File1 updated to fix bug
+eac28f5 Day1 commands executed and stored in file commands.txt
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp fol
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git branch
+  bug1
+* master
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git branch -d bug1
+Deleted branch bug1 (was 6d053da).
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git branch
+* master
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+6d053da (HEAD -> master) bug1:File1 updated to fix bug
+eac28f5 Day1 commands executed and stored in file commands.txt
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp fol
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git checkout -b bug2
+Switched to a new branch 'bug2'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug2)
+$ git branch
+* bug2
+  master
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug2)
+$ ----------update fil1 to fix bug2
+bash: ----------update: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug2)
+$ git status
+On branch bug2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug2)
+$ git diff
+diff --git a/File1.txt b/File1.txt
+index 3be022e..91c9aee 100644
+--- a/File1.txt
++++ b/File1.txt
+@@ -1,4 +1,6 @@
+ Hello World.......
+ this second line is added in this modification
+
+-Change - to fix bug1
+\ No newline at end of file
++Change - to fix bug1
++
++Change - to fix bug2
+\ No newline at end of file
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug2)
+$ git log --oneline
+6d053da (HEAD -> bug2, master) bug1:File1 updated to fix bug
+eac28f5 Day1 commands executed and stored in file commands.txt
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp fol
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug2)
+$ git commit -am "bug2: File1 updated to fix bug2"
+[bug2 bfac1e6] bug2: File1 updated to fix bug2
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug2)
+$ git log --oneline
+bfac1e6 (HEAD -> bug2) bug2: File1 updated to fix bug2
+6d053da (master) bug1:File1 updated to fix bug
+eac28f5 Day1 commands executed and stored in file commands.txt
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp fol
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug2)
+$ git status
+On branch bug2
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+6d053da (HEAD -> master) bug1:File1 updated to fix bug
+eac28f5 Day1 commands executed and stored in file commands.txt
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp fol
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ------update file1 of master on the same line as of fixing bug2 to generate co
+bash: ------update: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git commit -am "WI5:File1 updated by team mate for WI5-logout feature and adde
+[master b2b9465] WI5:File1 updated by team mate for WI5-logout feature and added
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+b2b9465 (HEAD -> master) WI5:File1 updated by team mate for WI5-logout feature a
+6d053da bug1:File1 updated to fix bug
+eac28f5 Day1 commands executed and stored in file commands.txt
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp fol
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git merge bug2
+Auto-merging File1.txt
+CONFLICT (content): Merge conflict in File1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master|MERGING)
+$ -------open the file file1.txt and resolve the conflicts
+bash: -------open: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master|MERGING)
+$ git commit -am "conflict fix: file1 updated for WI5 and bug2"
+[master 1ee3fa4] conflict fix: file1 updated for WI5 and bug2
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline
+1ee3fa4 (HEAD -> master) conflict fix: file1 updated for WI5 and bug2
+b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colon
+bfac1e6 (bug2) bug2: File1 updated to fix bug2
+6d053da bug1:File1 updated to fix bug
+eac28f5 Day1 commands executed and stored in file commands.txt
+9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp fol
+acfa7a5 WI2: File2 created with Welcome to GIT text
+64f604e WI1:File Updated, change added for WI1
+11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git  log --oneline --graph --decorate
+*   1ee3fa4 (HEAD -> master) conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git checkout -b CR1
+Switched to a new branch 'CR1'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1)
+$ -------file1 update ----- change: -> to work on cr1 and added arrow sign
+bash: -------file1: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1)
+$ git status
+On branch CR1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        to
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1)
+$ git status
+On branch CR1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1)
+$ git commit -am "CR1:File1 updated to work on CR1 and added arrow sign"
+[CR1 96103da] CR1:File1 updated to work on CR1 and added arrow sign
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1)
+$ git status
+On branch CR1
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1)
+$ git log --oneline --graph --decorate
+* 96103da (HEAD -> CR1) CR1:File1 updated to work on CR1 and added arrow sign
+*   1ee3fa4 (master) conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1)
+$ git checkout  master
+Switched to branch 'master'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline --graph --decorate
+*   1ee3fa4 (HEAD -> master) conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ------update file1 updated by team mate for WI6- Login feature and added numbe
+bash: ------update: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git commit -am "WI6: File1 updated by team mate for WI6- Login feature and add
+[master 9818cf1] WI6: File1 updated by team mate for WI6- Login feature and adde
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline --decorate --graph
+* 9818cf1 (HEAD -> master) WI6: File1 updated by team mate for WI6- Login featur
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git checkout CR1
+Switched to branch 'CR1'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1)
+$ git log --oneline --decorate --graph
+* 96103da (HEAD -> CR1) CR1:File1 updated to work on CR1 and added arrow sign
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1)
+$ git rebase master
+error: could not apply 96103da... CR1:File1 updated to work on CR1 and added arr
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort"
+Could not apply 96103da... CR1:File1 updated to work on CR1 and added arrow sign
+Auto-merging File1.txt
+CONFLICT (content): Merge conflict in File1.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto 9818cf1
+Last command done (1 command done):
+   pick 96103da CR1:File1 updated to work on CR1 and added arrow sign
+No commands remaining.
+You are currently rebasing branch 'CR1' on '9818cf1'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1|REBASE 1/1)
+$ ---------update file1 manually
+bash: ---------update: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto 9818cf1
+Last command done (1 command done):
+   pick 96103da CR1:File1 updated to work on CR1 and added arrow sign
+No commands remaining.
+You are currently rebasing branch 'CR1' on '9818cf1'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1|REBASE 1/1)
+$ git add .
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto 9818cf1
+Last command done (1 command done):
+   pick 96103da CR1:File1 updated to work on CR1 and added arrow sign
+No commands remaining.
+You are currently rebasing branch 'CR1' on '9818cf1'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1|REBASE 1/1)
+$ git log --oneline --graph --decorate
+* 9818cf1 (HEAD, master) WI6: File1 updated by team mate for WI6- Login feature
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1|REBASE 1/1)
+$ git rebase --continue
+hint: Waiting for your editor to close the file... unix2dos: converting file E://Demo/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file E:/TRaiNiNG/3 GIT/Projects/Demo/.git/COMMIT_EDITMSG to
+[detached HEAD 0b0215f] CR1:File1 updated to work on CR1 and added arrow sign
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+Successfully rebased and updated refs/heads/CR1.
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1)
+$ git log --oneline --graph --decorate
+* 0b0215f (HEAD -> CR1) CR1:File1 updated to work on CR1 and added arrow sign
+* 9818cf1 (master) WI6: File1 updated by team mate for WI6- Login feature and ad
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1)
+$ git status
+On branch CR1
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (CR1)
+$ git checkout master
+Switched to branch 'master'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline --graph --decorate
+* 9818cf1 (HEAD -> master) WI6: File1 updated by team mate for WI6- Login featur
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git merge CR1
+Updating 9818cf1..0b0215f
+Fast-forward
+ File1.txt | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline --graph --decorate
+* 0b0215f (HEAD -> master, CR1) CR1:File1 updated to work on CR1 and added arrow
+* 9818cf1 WI6: File1 updated by team mate for WI6- Login feature and added numbe
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ --------update file1
+bash: --------update: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ --------change was Change 6: -> WI7 in progress related cart feature
+bash: --------change: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git checkout bug2
+error: Your local changes to the following files would be overwritten by checkou
+        File1.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git stash list
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git stash
+Saved working directory and index state WIP on master: 0b0215f CR1:File1 updateded arrow sign
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git stash list
+stash@{0}: WIP on master: 0b0215f CR1:File1 updated to work on CR1 and added arr
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git stash pop
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (9e21cf64fe43449ebd73b5d1a457740ef8a2d244)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git stash list
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git stash save WI7Cart
+Saved working directory and index state On master: WI7Cart
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git stash list
+stash@{0}: On master: WI7Cart
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git stash list
+stash@{0}: On master: WI7Cart
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git stash apply stash@{0}
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git commit -am "WI7:File1 updated to test stash for cart feature"
+[master e89a5bd] WI7:File1 updated to test stash for cart feature
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline --graph --decorate
+* e89a5bd (HEAD -> master) WI7:File1 updated to test stash for cart feature
+* 0b0215f (CR1) CR1:File1 updated to work on CR1 and added arrow sign
+* 9818cf1 WI6: File1 updated by team mate for WI6- Login feature and added numbe
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git branch
+  CR1
+  bug2
+* master
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git remote
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git remote add origin git@github.com:AccelBlaze/GitELTPDemo.git
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git remote
+origin
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git remote -v
+origin  git@github.com:AccelBlaze/GitELTPDemo.git (fetch)
+origin  git@github.com:AccelBlaze/GitELTPDemo.git (push)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline --graph --decorate
+* e89a5bd (HEAD -> master) WI7:File1 updated to test stash for cart feature
+* 0b0215f (CR1) CR1:File1 updated to work on CR1 and added arrow sign
+* 9818cf1 WI6: File1 updated by team mate for WI6- Login feature and added numbe
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git push -u origin master
+The authenticity of host 'github.com (13.234.176.102)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,13.234.176.102' (RSA) to the list of know
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git push -u origin master
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ^C
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git remote add origin https://git@github.com:AccelBlaze/GitELTPDemo.git
+error: remote origin already exists.
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ -------also dont copy the ssh url----copy the https one
+bash: -------also: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git remote remove origin
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git remote
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git remote add origin https://github.com/AccelBlaze/GitELTPDemo.git
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git remote
+origin
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git remote -v
+origin  https://github.com/AccelBlaze/GitELTPDemo.git (fetch)
+origin  https://github.com/AccelBlaze/GitELTPDemo.git (push)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git push -u origin master
+
+Unhandled Exception: System.ComponentModel.Win32Exception: Invalid window handle
+   at MS.Win32.ManagedWndProcTracker.HookUpDefWindowProc(IntPtr hwnd)
+   at MS.Win32.ManagedWndProcTracker.OnAppDomainProcessExit()
+   at MS.Internal.ShutDownListener.HandleShutDown(Object sender, EventArgs e)
+Enumerating objects: 36, done.
+Counting objects: 100% (36/36), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (36/36), 6.26 KiB | 640.00 KiB/s, done.
+Total 36 (delta 15), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (15/15), done.
+To https://github.com/AccelBlaze/GitELTPDemo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ------now u may refresh the browser github to see the changes
+bash: ------now: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git  log --oneline --graph --decorate
+* e89a5bd (HEAD -> master, origin/master) WI7:File1 updated to test stash for ca
+* 0b0215f (CR1) CR1:File1 updated to work on CR1 and added arrow sign
+* 9818cf1 WI6: File1 updated by team mate for WI6- Login feature and added numbe
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ -----update file2 on remote and commit
+bash: -----update: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 736 bytes | 5.00 KiB/s, done.
+From https://github.com/AccelBlaze/GitELTPDemo
+ * branch            master     -> FETCH_HEAD
+   e89a5bd..5269287  master     -> origin/master
+Updating e89a5bd..5269287
+Fast-forward
+ File2.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ------now if u open file2 on local u will see the changes
+bash: ------now: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline --graph --decorate
+* 5269287 (HEAD -> master, origin/master) WI8: by team mate on remote master to
+* e89a5bd WI7:File1 updated to test stash for cart feature
+* 0b0215f (CR1) CR1:File1 updated to work on CR1 and added arrow sign
+* 9818cf1 WI6: File1 updated by team mate for WI6- Login feature and added numbe
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ -------update file1 locally change 7
+bash: -------update: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git commit -am "WI9:File1 updated on local master to make first letter caps to
+[master 7cb25cb] WI9:File1 updated on local master to make first letter caps to
+ 1 file changed, 16 insertions(+), 14 deletions(-)
+ rewrite File1.txt (78%)
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline --graph --decorate
+* 7cb25cb (HEAD -> master) WI9:File1 updated on local master to make first lette
+* 5269287 (origin/master) WI8: by team mate on remote master to test pull
+* e89a5bd WI7:File1 updated to test stash for cart feature
+* 0b0215f (CR1) CR1:File1 updated to work on CR1 and added arrow sign
+* 9818cf1 WI6: File1 updated by team mate for WI6- Login feature and added numbe
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ ---------update in file 1 in remote change 7
+bash: ---------update: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git push
+To https://github.com/AccelBlaze/GitELTPDemo.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/AccelBlaze/GitELTPDemo.gi
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 778 bytes | 7.00 KiB/s, done.
+From https://github.com/AccelBlaze/GitELTPDemo
+   5269287..9222f75  master     -> origin/master
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline --graph --decorate
+* 7cb25cb (HEAD -> master) WI9:File1 updated on local master to make first lette
+* 5269287 WI8: by team mate on remote master to test pull
+* e89a5bd WI7:File1 updated to test stash for cart feature
+* 0b0215f (CR1) CR1:File1 updated to work on CR1 and added arrow sign
+* 9818cf1 WI6: File1 updated by team mate for WI6- Login feature and added numbe
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git pull --rebase
+error: could not apply 7cb25cb... WI9:File1 updated on local master to make firsebase
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort"
+Could not apply 7cb25cb... WI9:File1 updated on local master to make first lette
+Auto-merging File1.txt
+CONFLICT (content): Merge conflict in File1.txt
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master|REBASE 1/
+$ ----change the file content locally
+bash: ----change: command not found
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master|REBASE 1/
+$ git log --oneline --graph --decorate
+* 9222f75 (HEAD, origin/master) CR2: by team mate on remote server to test rebas
+* 5269287 WI8: by team mate on remote master to test pull
+* e89a5bd WI7:File1 updated to test stash for cart feature
+* 0b0215f (CR1) CR1:File1 updated to work on CR1 and added arrow sign
+* 9818cf1 WI6: File1 updated by team mate for WI6- Login feature and added numbe
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master|REBASE 1/
+$ git add .
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master|REBASE 1/
+$ git rebase --continue
+hint: Waiting for your editor to close the file... unix2dos: converting file E://Demo/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file E:/TRaiNiNG/3 GIT/Projects/Demo/.git/COMMIT_EDITMSG to
+[detached HEAD 7f1036c] WI9:File1 updated on local master to make first letter c
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+Successfully rebased and updated refs/heads/master.
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline --graph --decorate
+* 7f1036c (HEAD -> master) WI9:File1 updated on local master to make first lette
+* 9222f75 (origin/master) CR2: by team mate on remote server to test rebase with
+* 5269287 WI8: by team mate on remote master to test pull
+* e89a5bd WI7:File1 updated to test stash for cart feature
+* 0b0215f (CR1) CR1:File1 updated to work on CR1 and added arrow sign
+* 9818cf1 WI6: File1 updated by team mate for WI6- Login feature and added numbe
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 418 bytes | 209.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/AccelBlaze/GitELTPDemo.git
+   9222f75..7f1036c  master -> master
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$ git log --oneline --graph --decorate
+* 7f1036c (HEAD -> master, origin/master) WI9:File1 updated on local master to mo test rebase
+* 9222f75 CR2: by team mate on remote server to test rebase with conflict
+* 5269287 WI8: by team mate on remote master to test pull
+* e89a5bd WI7:File1 updated to test stash for cart feature
+* 0b0215f (CR1) CR1:File1 updated to work on CR1 and added arrow sign
+* 9818cf1 WI6: File1 updated by team mate for WI6- Login feature and added numbe
+*   1ee3fa4 conflict fix: file1 updated for WI5 and bug2
+|\
+| * bfac1e6 (bug2) bug2: File1 updated to fix bug2
+* | b2b9465 WI5:File1 updated by team mate for WI5-logout feature and added colo
+|/
+* 6d053da bug1:File1 updated to fix bug
+* eac28f5 Day1 commands executed and stored in file commands.txt
+* 9635726 (tag: V1.0) config: .gitignore file created to skip class, jar, temp f
+* acfa7a5 WI2: File2 created with Welcome to GIT text
+* 64f604e WI1:File Updated, change added for WI1
+* 11e6534 WI1:File1 created with Hello World.... text
+
+Lenovo@LAPTOP-QPOHU7OE MINGW64 /e/TRaiNiNG/3 GIT/Projects/Demo (master)
+$
