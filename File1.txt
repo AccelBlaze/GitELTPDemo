@@ -4,3 +4,6 @@ this second line is added in this modification
 Change: - to fix bug1
 
 Change: - by team mate for WI5-logout feature and added colon
+
+Change - to fix bug2
+
