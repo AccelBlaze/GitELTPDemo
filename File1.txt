@@ -10,3 +10,5 @@ Change 3: -> to fix bug2
 Change 4: -> by team mate for WI6- Login feature and added number
 
 Change 5: -> to work on CR1 and added arrow sign
+
+Change 6: -> WI7 in progress related cart feature
